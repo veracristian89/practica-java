@@ -4,7 +4,7 @@ class Cuenta {
 	private double saldo;//al utilizar private ya no se puede acceder al parametro saldo desde una instancia para modificarlo.
 	int agencia;
 	int numero;
-	Cliente titular = new Cliente();
+	private Cliente titular = new Cliente();
 	
 
 	public void depositar(double monto) {
@@ -44,5 +44,13 @@ class Cuenta {
 	
 	public int getAgencia() {
 		return agencia;
+	}
+	
+	public void setTitular(Cliente titular) {
+		this.titular = titular;
+	}
+	
+	public Cliente getTitular() {
+		return titular;
 	}
 }
