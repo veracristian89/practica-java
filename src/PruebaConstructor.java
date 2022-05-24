@@ -4,9 +4,7 @@ public class PruebaConstructor {
 	public static void main(String[] args) {
 		
 		Cuenta cuenta = new Cuenta(5);
-		cuenta.setAgencia(-4);
-		
-		System.out.println(cuenta.getAgencia());
+		Cuenta cuenta2 = new Cuenta(4);
 		
 	}
 	

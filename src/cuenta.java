@@ -2,19 +2,22 @@
 
 class Cuenta {
 	private double saldo;//al utilizar private ya no se puede acceder al parametro saldo desde una instancia para modificarlo.
-	int agencia;
-	int numero;
+	private int agencia;
+	private int numero;
 	private Cliente titular = new Cliente();
+	private static int total = 0; // variable estatica, es pasa a ser un atributo de la clase y no de sus posibles instancias.
 	
 	//constructor
-	public Cuenta(int agencia) {
+	public Cuenta(int agencia) { // cual es la ventaja? con el constructor obliga a colocar un valor a agencia.
+		
 		if (agencia <= 0) {
 			System.out.println("no se permite 0");
 			this.agencia = 1;
 		} else {
 			this.agencia = agencia;
 		}
-		System.out.println("aqui se crea una nueva cuenta");
+		total++;
+		System.out.println("se van creando "+ total + " cuentas");
 	}
 	
 	// metodo sin retorno (void)
