@@ -29,4 +29,20 @@ class Cuenta {
 			return false;
 		}
 	}
+	
+	public double getSaldo() {
+		return this.saldo;
+	}
+	
+	public void setAgencia(int agencia) {
+		if(agencia>0) {
+		this.agencia = agencia;
+		} else {
+			System.out.println("agencia invalida");
+		}
+	}
+	
+	public int getAgencia() {
+		return agencia;
+	}
 }
