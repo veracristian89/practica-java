@@ -7,7 +7,13 @@ class Cuenta {
 	private Cliente titular = new Cliente();
 	
 	//constructor
-	public Cuenta() {
+	public Cuenta(int agencia) {
+		if (agencia <= 0) {
+			System.out.println("no se permite 0");
+			this.agencia = 1;
+		} else {
+			this.agencia = agencia;
+		}
 		System.out.println("aqui se crea una nueva cuenta");
 	}
 	
