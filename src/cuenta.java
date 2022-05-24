@@ -1,7 +1,7 @@
 //entidad cuenta:
 
 class Cuenta {
-	double saldo;
+	private double saldo;//al utilizar private ya no se puede acceder al parametro saldo desde una instancia para modificarlo.
 	int agencia;
 	int numero;
 	Cliente titular = new Cliente();
