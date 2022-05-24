@@ -6,11 +6,17 @@ class Cuenta {
 	int numero;
 	private Cliente titular = new Cliente();
 	
-
+	//constructor
+	public Cuenta() {
+		System.out.println("aqui se crea una nueva cuenta");
+	}
+	
+	// metodo sin retorno (void)
 	public void depositar(double monto) {
 		this.saldo += monto;
 	}
-
+	
+	//metodo con retorno (boolean, aunque pueden ser distintos retornos como int o double)
 	public boolean retirar(double monto) {
 		if (this.saldo >= monto) {
 			this.saldo -= monto;
